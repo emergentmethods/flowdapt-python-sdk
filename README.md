@@ -1,5 +1,7 @@
 # Flowdapt Python SDK
 
+![GitLab Release (latest by SemVer)](https://img.shields.io/gitlab/v/release/emergentmethods/flowdapt-python-sdk?style=flat-square)
+![GitLab](https://img.shields.io/gitlab/license/emergentmethods/flowdapt-python-sdk?style=flat-square)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/flowdapt_sdk?style=flat-square)
 
 This is the official Python SDK for the Flowdapt API. It provides a simple way to programmatically interact with Flowdapt in Python. It is asynchronous and uses `httpx` as the underlying HTTP client.
