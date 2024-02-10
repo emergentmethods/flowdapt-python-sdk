@@ -7,7 +7,7 @@ This is the official Python SDK for the Flowdapt API. It provides a simple way t
 ## Installation
 
 ```bash
-pip install flowdapt-sdk
+pip install flowdapt_sdk
 ```
 
 ## Usage
