@@ -39,7 +39,7 @@ class APIRequest:
         self.accept = accept
         self.url = build_url(
             base_url=self.base_url,
-            endpoint=self.endpoint,
+            path=self.endpoint,
             query=self.query,
             params=self.params
         )
