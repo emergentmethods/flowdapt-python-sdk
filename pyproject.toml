@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "flowdapt_sdk"
+version = "0.0.0"
+description = "Python SDK for Flowdapt"
+authors = ["Emergent Methods <contact@emergentmethods.ai>"]
+packages = [
+    { include = "flowdapt_sdk" },
+]
+license = "MIT"
+repository = "https://gitlab.com/emergentmethods/flowdapt-python-sdk"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+orjson = "^3.9.10"
+pydantic = ">=1.10.13,<3"
+httpx = "^0.25.2"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.2.0"
+flake8 = "^6.0.0"
+pytest = "^7.3.1"
+pytest-asyncio = "^0.21.0"
+mkdocs = "^1.4.3"
+mkdocs-material = "^9.1.15"
+coverage = "^7.2.7"
+pre-commit = "^3.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+plugins = "pydantic.mypy"
+ignore_missing_imports = "True"
+
+[tool.pytest.ini_options]
+addopts = "-s -p no:warnings"
+testpaths = [
+    "tests",
+]
+asyncio_mode = "auto"
+log_cli = "True"
+log_auto_indent = "False"
+
+[tool.coverage.run]
+source = ["flowdapt_sdk"]
+
+[tool.coverage.report]
+ignore_errors = "true"
+
+[tool.coverage.xml]
+output = "coverage.xml"
+
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver"
+version_provider = "poetry"
+update_changelog_on_bump = true
+bump_message = "chore(release): Release $new_version"

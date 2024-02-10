@@ -1,0 +1,19 @@
+version: '3'
+
+vars:
+  PACKAGE_SRC_DIR: flowdapt_sdk
+
+tasks:
+  # Linting
+  lint:
+    cmds:
+      - flake8 {{.PACKAGE_SRC_DIR}}
+
+  build:
+    cmds:
+      - poetry build --format wheel
+
+  build-docs:
+    cmds:
+      - mkdocs build
+

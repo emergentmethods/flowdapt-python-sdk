@@ -1,0 +1,49 @@
+site_name: flowdapt_sdk
+site_description: Python SDK for Flowdapt
+site_author: Emergent Methods
+copyright: Emergent Methods
+site_url: https://gitlab.com/flowdapt/python-sdk
+repo_url: flowdapt/python-sdk
+repo_name: flowdapt_sdk
+
+nav:
+  - Overview: index.md
+
+extra_css:
+  - assets/css/theme.css
+
+theme: 
+  name: material
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    - search.share
+    - content.code.copy
+    - navigation.top
+    - navigation.expand
+    - navigation.footer
+    - navigation.path
+    - navigation.sections
+    - navigation.indexes
+    - navigation.path
+    - toc.integrate
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - python
+  palette:
+    scheme: slate
+    primary: custom
+    accent: custom
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.caret
+  - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - toc:
+      permalink: true
